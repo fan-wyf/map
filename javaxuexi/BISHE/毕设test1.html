@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="时空数据">
+    <meta name="description" content="北京市某时间某地段的客流量情况统计">
+    <title>北京邮电大学移动生活与新媒体实验室</title>
+    <style type="text/css">
+        header{background-color: #66afe9}
+
+        #title1{display:inline-block; font-size: 50px; color: white; font-family: 华光行楷_CNKI;
+            text-align: center }
+        #logo{display: inline-block}
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 1920px;
+        }
+/* 侧边栏按钮 */
+        #btn {
+            position: absolute;
+            top: 22%;
+            left: 298px;
+            height: 75px;
+            border: 0;
+            border-left: 1px solid rgb(23, 32, 43,0.2);
+            background: #b0c4de;
+
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .box {
+            float: left;
+            position: relative;
+            left: 0;
+            height: 1000px;
+            width: 300px;
+            margin-left: 0;
+            display: block;
+            background-color: #ffffff;
+            -moz-transition: margin-left 2s;
+            transition: margin-left 2s;
+        }
+
+        aside ul li {
+            height: 60px;
+            line-height: 80px;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        aside ul li a {
+            width: 100%;
+            height: 100%;
+            text-decoration-line: none;
+            color: black;
+            display: block;
+            text-align: center;
+        }
+
+        aside ul li a:hover {
+            background: #66afe9;
+        }
+
+
+    </style>
+<!--js部分 侧边栏收放 目前还有问题-->
+    <script>
+        let box = document.getElementById("test")
+        let btn = document.getElementById("btn")
+        btn.onclick = function() {
+            if (box.offsetLeft == 0) {
+                box.style['margin-left'] = -300 + "px"
+            } else {
+                box.style['margin-left'] = 0 + "px"
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<header>
+    <img id="logo" src="../resources/image/北邮logo.png" alt="北京邮电大学" width="300">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div id="title1" > 移动生活与新媒体实验室<br>Mobile life and New Media Lab</div>
+
+
+</header>
+
+
+
+
+<aside class="box" id="test">
+    <button id="btn">三</button>
+    <ul>
+        <li>
+            <h3>功能查询</h3>
+        </li>
+        <li><a href="#">轨迹图示例</a></li>
+        <li><a href="热力图.html">热力图</a></li>
+        <li><a href="#">兴趣点推荐</a></li>
+
+    </ul>
+    </aside>
+
+
+<iframe id="ditu" src="baiduditu beijing.html" width="1100" height="600"
+        frameborder="0" scrolling="no"></iframe>
+
+
+<br>
+<a href="#top">回到顶部</a>
+
+
+</body>
+</html>

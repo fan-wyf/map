@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        a {
+            text-decoration-line: none;
+            color: #fff;
+        }
+
+        aside {
+            height: 100%;
+            width: 300px;
+            position: relative;
+            left: 0;
+            top: 0;
+            background: #243747;
+            transition: width .5s;
+        }
+
+        aside .first {
+            height: 20px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 35px;
+        }
+
+        aside .first .logo {
+            color: #243747;
+            font-size: 30px;
+            background: lightcyan;
+            border-radius: 20px;
+            transition: color 2s;
+        }
+
+        aside .first .logo:hover {
+            color: crimson;
+        }
+
+        aside ul li {
+            width: 100%;
+            list-style-type: none;
+            padding-top: 5px;
+        }
+
+        aside ul li a {
+            display: block;
+            padding-left: 20px;
+            text-align: left;
+            color: #fff;
+            transition: color 2s;
+        }
+
+        aside .listtext {
+            font-size: 30px;
+            display: inline-block;
+        }
+
+        aside ul li a:hover {
+            color: #000;
+            background: lightblue;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            border: 0;
+            background: #243747;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            right: -12px;
+            height: 44px;
+            cursor: pointer;
+        }
+
+
+        /*mini*/
+
+        .minibody .listtext {
+            display: none;
+        }
+
+        .minibody aside {
+            width: 40px;
+            text-align: center;
+        }
+
+        .minibody aside ul li a {
+            padding-left: 0;
+        }
+
+        .minibody aside .first .logo {
+            font-size: 12px;
+        }
+    </style>
+
+    <script>
+        var body = document.getElementsByTagName("body")[0]
+        var aside = document.getElementsByTagName("aside")[0]
+
+        function list() {
+            if (aside.clientWidth <= 40) {
+                body.className = ""
+            } else if (aside.clientWidth > 40) {
+                console.log("side")
+                body.className = "minibody"
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+<aside>
+    <button class="btn" onclick="list()">三</button>
+    <ul>
+        <li class="first">
+            <div class="logo">
+                LOGO
+            </div>
+
+        </li>
+        <li>
+            <a href="">![](icon.png)<span class="listtext"> and List</span></a>
+        </li>
+        <li>
+            <a href="">![](icon.png)<span class="listtext"> and List</span></a>
+        </li>
+        <li>
+            <a href="">![](icon.png)<span class="listtext"> and List</span></a>
+        </li>
+        <li>
+            <a href="">![](icon.png)<span class="listtext"> and List</span></a>
+        </li>
+        <li>
+            <a href="">![](icon.png)<span class="listtext"> and List</span></a>
+        </li>
+    </ul>
+</aside>
+
+</body>
+</html>
